@@ -1,0 +1,78 @@
+{
+  "name": "nestjs-fcm-push-notification",
+  "version": "1.0.0",
+  "description": "This package using firebase admin dependency",
+  "author": "Mrr Hak <longkimhak.kh@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "*.md"
+  ],
+  "scripts": {
+    "start:dev": "tsc -w",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "keywords": [
+    "nestjs",
+    "nestjs-fcm",
+    "nestjs-fcm-push-notification"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrrhak/nestjs-fcm-push-notification.git"
+  },
+  "bugs": "https://github.com/mrrhak/nestjs-fcm-push-notification.git",
+  "peerDependencies": {
+    "@nestjs/common": "^7.6.13"
+  },
+  "dependencies": {
+    "firebase-admin": "^9.10.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.6"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^7.6.13",
+    "@nestjs/core": "^7.6.13",
+    "@nestjs/platform-express": "^7.6.13",
+    "@nestjs/testing": "^7.6.13",
+    "@types/express": "^4.17.11",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "@types/supertest": "^2.0.10",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "supertest": "^6.1.3",
+    "ts-jest": "^26.5.2",
+    "ts-node": "^9.1.1",
+    "tsc-watch": "4.4.0",
+    "tslint": "5.16.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
